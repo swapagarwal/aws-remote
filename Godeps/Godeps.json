@@ -1,0 +1,26 @@
+{
+	"ImportPath": "github.com/swapagarwal/aws-remote",
+	"GoVersion": "go1.5",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/abbot/go-http-auth",
+			"Comment": "v0.3-2-gfa194fe",
+			"Rev": "fa194fe927580ca87aae2e747412dd39eafee1e8"
+		},
+		{
+			"ImportPath": "golang.org/x/crypto/bcrypt",
+			"Rev": "c8b9e6388ef638d5a8a9d865c634befdc46a6784"
+		},
+		{
+			"ImportPath": "golang.org/x/crypto/blowfish",
+			"Rev": "c8b9e6388ef638d5a8a9d865c634befdc46a6784"
+		},
+		{
+			"ImportPath": "golang.org/x/net/context",
+			"Rev": "f53a5581bc2fdd52820df86cbfd8483816fe8bcc"
+		}
+	]
+}
