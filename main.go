@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	auth "github.com/abbot/go-http-auth"
+	auth "github.com/swapagarwal/aws-remote/Godeps/_workspace/src/github.com/abbot/go-http-auth"
 	"net/http"
 	"os"
 )
