@@ -1,0 +1,20 @@
+{
+	"name": "AWS Remote",
+	"description": "Controlling AWS made easy!",
+	"repository": "https://github.com/swapagarwal/aws-remote",
+	"success_url": "/",
+	"env": {
+		"AWS_ACCESS_KEY_ID": {
+			"description": "Your AWS Access Key ID"
+		},
+		"AWS_SECRET_ACCESS_KEY": {
+			"description": "Your AWS Secret Access Key"
+		},
+		"login": {
+			"description": "Admin username for this app"
+		},
+		"password": {
+			"description": "Admin password for this app"
+		}
+	}
+}
