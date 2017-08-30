@@ -91,6 +91,18 @@ func StopEC2(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintln(w, resp)
 }
 
+func ListS3(w http.ResponseWriter, r *auth.AuthenticatedRequest) {
+	svc := s3.New(session.New())
+
+	resp, err := svc.ListBuckets(nil)
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Println(resp)
+	json.NewEncoder(w).Encode(resp)
+}
+
 func main() {
 	authenticator := auth.NewBasicAuthenticator("aws-remote.herokuapp.com", Secret)
 
@@ -101,6 +113,8 @@ func main() {
 	r.HandleFunc("/ec2/", authenticator.Wrap(ListEC2))
 	r.HandleFunc("/ec2/start/{id}", StartEC2)
 	r.HandleFunc("/ec2/stop/{id}", StopEC2)
+
+	r.HandleFunc("/s3/", authenticator.Wrap(ListS3))
 
 	http.ListenAndServe(":"+os.Getenv("PORT"), r)
 }
